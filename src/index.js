@@ -36,10 +36,6 @@ const envGraphQLValidatorNames = {
     'ProvidedNonNullArguments',
     'ScalarLeafs',
   ),
-  literal: without(allGraphQLValidatorNames,
-    'KnownFragmentNames',
-    'NoUnusedFragments',
-  ),
 };
 
 const internalTag = 'ESLintPluginGraphQLFile';
