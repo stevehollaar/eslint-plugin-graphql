@@ -18,10 +18,6 @@ function getFieldWasRequestedOnNode(node, field, recursing = false) {
     if (n.kind === 'InlineFragment' && !recursing) {
       return getFieldWasRequestedOnNode(n, field, true);
     }
-    if (n.kind === 'FragmentSpread') {
-      // We don't know if the field was requested in this case, so default to not erroring.
-      return true;
-    }
     return n.name.value === field;
   });
 }
